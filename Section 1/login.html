@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+
     <style>
 
         .my-card{
-            border: 2px solid red;
+            /* border: 2px solid red; */
             width: 25%;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 2px 2px 5px 2px #0000006f;
+            box-sizing: border-box;
+            background-color: white;
         }
 
         body{
@@ -17,7 +24,50 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            /* background-image: linear-gradient( 45deg, #fffeae, #b6b6ff ); */
+            /* background-image: url('https://wallpapers.com/images/hd/minimalist-geometric-background-design-6tgpche84avnjqvz.jpg'); */
+            background-image: linear-gradient( 300deg, #ffffffc6, #b6b6ff00 ), url('https://wallpapers.com/images/hd/minimalist-geometric-background-design-6tgpche84avnjqvz.jpg');
+            background-size: cover;
+            background-position: bottom;
         }
+
+        .my-input{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .my-btn{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: crimson;
+            color: #fff;
+            border: none;
+            /* margin-top: 40px; */
+        }
+
+        .form-title{
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: Roboto;
+        }
+
+        *{
+            font-family: Roboto;
+        }
+
+
+        .logo{
+            width: 100px;
+            display: block;
+            margin: auto;
+        }
+
 
     </style>
 
@@ -27,7 +77,10 @@
     <div class="my-card">
 
         <form>
-            <h2 class="form-title">Login Form</h2>
+
+            <img class="logo" src="https://avatars.githubusercontent.com/u/26999847?s=280&v=4" alt="">
+
+            <h2 class="form-title">Student Login</h2>
 
             <label>Email Address</label>
             <input class="my-input" type="email">
