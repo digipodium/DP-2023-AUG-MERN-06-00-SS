@@ -22,6 +22,16 @@
             object-fit: cover;
             /* background-color: red; */
         }
+
+        .card{
+            transform-style: preserve-3d;
+            /* transform: perspective(1000px); */
+        }
+
+        .card-body{
+            transform: translateZ(40px);
+        }
+
     </style>
 
 </head>
@@ -226,6 +236,19 @@
         });
 
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+    VanillaTilt.init( document.querySelectorAll('.card'), {
+        max: 10,
+        speed : 200,
+        glare: true
+    });
+
+</script>
+
 
 </body>
 
