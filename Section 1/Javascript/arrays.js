@@ -33,7 +33,7 @@ console.log(movies);
 // removes more than 1 element from any index
 movies.splice(2, 3);
 
-// console.log(movies);
+console.log(movies);
 
 console.log( [ 'new element', ...movies, 'new element', ...nums ] );
 console.log( [ ...movies.slice(0, 2), 'new element', ...movies.slice(2) ]);
