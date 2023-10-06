@@ -6,6 +6,7 @@ import "./App.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Navbar from "./components/Navbar";
+import EventHandling from "./components/EventHandling";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/" element={ <Home /> } />
           <Route path="/register" element={ <Signup /> } />
           <Route path="/login" element={ <Login /> } />
+          <Route path="/eventhandling" element={ <EventHandling /> } />
           <Route path="*" element={ <NotFound /> } />
 
         </Routes>

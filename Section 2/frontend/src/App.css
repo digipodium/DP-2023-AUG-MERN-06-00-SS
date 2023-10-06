@@ -3,3 +3,9 @@
   text-align: center;
   font-weight: bold;
 }
+
+.nav-item .active{
+  font-weight: bold;
+  color: crimson !important;
+  border-bottom: 2px solid crimson;
+}
