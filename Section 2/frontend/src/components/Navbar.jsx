@@ -41,6 +41,11 @@ const Navbar = () => {
                 Event Handling
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/state">
+                State Management
+              </NavLink>
+            </li>
             
             <li className="nav-item">
               <a className="nav-link disabled" aria-disabled="true">

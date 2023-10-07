@@ -3,11 +3,11 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-        <h1 className='heading'>Home Page</h1>
-        <h2 style={{ fontSize: 20, color: 'red' }}>Using Inline CSS</h2>
-        <hr />
-        <input type="text" />
-        
+      <h1 style={{ color : 'red' }}>Home Page</h1>
+      <button className='mybtn'>My Button</button>
+
+      <input type="text" />
+      <hr /><br />
     </div>
   )
 }

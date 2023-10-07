@@ -1,11 +1,7 @@
-.heading{
-  color: blue;
-  text-align: center;
-  font-weight: bold;
-}
-
-.nav-item .active{
-  font-weight: bold;
-  color: crimson !important;
-  border-bottom: 2px solid crimson;
+.mybtn{
+  padding: 10px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
