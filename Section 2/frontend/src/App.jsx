@@ -9,10 +9,12 @@ import Home from "./components/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import StateManagement from "./components/StateManagement";
 import Todo from "./components/Todo";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <div>
+      <Toaster position="top-right" />
       <BrowserRouter>
         <Navbar />
         <Routes>
