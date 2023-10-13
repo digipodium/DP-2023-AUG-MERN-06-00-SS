@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 
@@ -6,7 +7,7 @@ const Todo = () => {
     const [todoList, setTodoList] = useState([]);
 
     const addNewTodo = (e) => {
-        if(!e.target.value.trim()) return;
+        if (!e.target.value.trim()) return;
         if (e.key === 'Enter') {
             console.log(e.target.value);
 
@@ -45,11 +46,19 @@ const Todo = () => {
                             placeholder='Enter task here'
                             onKeyDown={addNewTodo} />
                     </div>
-                    <div className='card-body' style={{height: "70vh", overflow: 'auto'}}>
-                        {todoList.map((todo, index) => (<div className='border d-flex justify-content-between p-3' key={index}>
-                            <h3>{todo}</h3>
-                            <button className='btn btn-danger' onClick={() => { removeTodo(index) }} >Delete</button>
-                        </div>))}
+                    <div className='card-body' style={{ height: "70vh", overflow: 'auto' }}>
+                        <AnimatePresence mode='popLayout'>
+                            {todoList.map((todo, index) => (<motion.div
+                                className='border d-flex justify-content-between p-3'
+                                key={todo}
+                                initial={{ x:'100%' }}
+                                animate={{ x:0 }}
+                                layout
+                            >
+                                <h3>{todo}</h3>
+                                <button className='btn btn-danger' onClick={() => { removeTodo(index) }} >Delete</button>
+                            </motion.div>))}
+                        </AnimatePresence>
                     </div>
                 </div>
 

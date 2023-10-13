@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const StateManagement = () => {
 
@@ -27,7 +28,12 @@ const StateManagement = () => {
     }
 
     return (
-        <div>
+        <motion.div
+            className='bg-body-secondary vh-100'
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", duration: 1, damping: 20, stiffness: 100 }}
+        >
             <div className='container'>
                 <h1>State Management</h1>
                 <hr />
@@ -49,7 +55,7 @@ const StateManagement = () => {
                 <input type="text" className='form-control' onChange={e => setImageLink(e.target.value)} />
                 <img src={imageLink} width={width} alt="" />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

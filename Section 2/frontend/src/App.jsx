@@ -10,23 +10,26 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import StateManagement from "./components/StateManagement";
 import Todo from "./components/Todo";
 import { Toaster } from "react-hot-toast";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   return (
     <div>
       <Toaster position="top-right" />
       <BrowserRouter>
+        <AnimatePresence>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/register" element={<Signup />} />
           <Route path="/eventhandling" element={<EventHandling />} />
           <Route path="/state" element={<StateManagement />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
+        </AnimatePresence>
       </BrowserRouter>
     </div>
   );
