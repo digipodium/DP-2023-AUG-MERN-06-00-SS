@@ -6,12 +6,13 @@ const SignupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
   name : Yup.string().required('Name is required').min(3, 'Too Short'),
   password: Yup.string().required('Password is required').min(6, 'Too Short')
-  .matches('[a-zA-Z]', 'Password is invalid')
+  .matches(
+    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/,
+    'Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character'
+  )
 });
 
 const Signup = () => {
-
-
 
   // initialize formik
   const signupForm = useFormik({
