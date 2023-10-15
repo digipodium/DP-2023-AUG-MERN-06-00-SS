@@ -5,3 +5,9 @@
   border: none;
   border-radius: 5px;
 }
+
+.error-label{
+  color: crimson;
+  font-size: 15px;
+  margin-left: 10px;
+}
