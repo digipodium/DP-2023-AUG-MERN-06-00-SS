@@ -5,6 +5,9 @@ const url = "mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/mydatabase?retryWr
 mongoose.connect(url)
 .then((result) => {
     console.log('database connected');
-}).catch((err) => {
+    // console.log(result);
+})
+.catch((err) => {
     console.log(err);
 });
+
