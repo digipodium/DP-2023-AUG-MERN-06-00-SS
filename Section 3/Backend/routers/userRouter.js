@@ -28,8 +28,19 @@ router.get("/getall", (req, res) => {
     });
 });
 
-router.get("/getbyemail", (req, res) => {
-  res.send("getbyemail response from user");
+// : denotes url parameter
+router.get("/getbyemail/:email", (req, res) => {
+
+    console.log(req.params.email);
+
+    Model.find({email: req.params.email})
+    .then((result) => {
+      res.status(200).json(result);
+    }).catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+
 });
 
 router.get("/getbyid", (req, res) => {
