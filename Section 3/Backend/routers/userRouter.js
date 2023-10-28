@@ -30,46 +30,60 @@ router.get("/getall", (req, res) => {
 
 // : denotes url parameter
 router.get("/getbyemail/:email", (req, res) => {
+  console.log(req.params.email);
 
-    console.log(req.params.email);
-
-    Model.find({email: req.params.email})
+  Model.find({ email: req.params.email })
     .then((result) => {
       res.status(200).json(result);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-router.post('/authenticate', (req, res) => {
+router.post("/authenticate", (req, res) => {
   Model.findOne(req.body)
-  .then((result) => {
-    res.status(200).json(result);
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
-
 
 router.get("/getbyid/:id", (req, res) => {
-
   Model.findById(req.params.id)
-  .then((result) => {
-    res.status(200).json(result);
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-router.get("/update", (req, res) => {
-  res.send("update response from user");
+router.put("/update/:id", (req, res) => {
+  Model.findByIdAndUpdate(req.params.id, req.body, { new : true } )
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-router.get("/delete", (req, res) => {
-  res.send("update response from user");
+router.delete("/delete/:id", (req, res) => {
+  Model.findByIdAndDelete(req.params.id)
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
