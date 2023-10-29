@@ -22,7 +22,20 @@ const Signup = () => {
       password: ''
     },
 
-    onSubmit: (values) => { console.log(values) },
+    onSubmit: async (values) => { 
+      console.log(values);
+      
+      const res = await fetch('http://localhost:5000/user/add', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type' : 'application/json'
+        }
+      });
+
+      console.log(res.status);
+      
+    },
 
     validationSchema: SignupSchema
   
@@ -42,7 +55,7 @@ const Signup = () => {
                 <input type="text" className="form-control mb-3" id="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
                 <label>Password</label>
                 <span className='error-label'>{ signupForm.touched.password && signupForm.errors.password}</span>
-                <input type="text" className="form-control mb-3" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} />
+                <input type="password" className="form-control mb-3" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} />
 
                 <button type='submit' className='btn btn-primary mt-3'>Submit</button>
               </form>
