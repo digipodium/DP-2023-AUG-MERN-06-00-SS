@@ -19,6 +19,40 @@ const Login = () => {
     onSubmit: async (values, { resetForm }) => {
       console.log(values);
 
+      const res = await fetch('http://localhost:5000/user/authenticate', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (res.status === 200) {
+        enqueueSnackbar('Login Success', {
+          variant: 'success',
+          anchorOrigin: {
+            horizontal: 'right',
+            vertical: 'top'
+          }
+        })
+      } else if (res.status === 401) {
+        enqueueSnackbar('Email or Password is incorrect', {
+          variant: 'error',
+          anchorOrigin: {
+            horizontal: 'right',
+            vertical: 'top'
+          }
+        })
+      } else {
+        enqueueSnackbar('Something went wrong', {
+          variant: 'error',
+          anchorOrigin: {
+            horizontal: 'right',
+            vertical: 'top'
+          }
+        })
+      }
+
     }
 
   })

@@ -45,7 +45,8 @@ router.get("/getbyemail/:email", (req, res) => {
 router.post("/authenticate", (req, res) => {
   Model.findOne(req.body)
     .then((result) => {
-      res.status(200).json(result);
+      if(result) res.status(200).json(result);
+      else res.status(401).json({status : 'failed'});
     })
     .catch((err) => {
       console.log(err);
