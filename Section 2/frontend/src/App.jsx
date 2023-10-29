@@ -11,12 +11,14 @@ import StateManagement from "./components/StateManagement";
 import Todo from "./components/Todo";
 import { Toaster } from "react-hot-toast";
 import { AnimatePresence } from "framer-motion";
+import { SnackbarProvider } from "notistack";
 
 const App = () => {
   return (
     <div>
       <Toaster position="top-right" />
       <BrowserRouter>
+        <SnackbarProvider>
         <AnimatePresence>
         <Navbar />
         <Routes>
@@ -30,6 +32,7 @@ const App = () => {
 
         </Routes>
         </AnimatePresence>
+        </SnackbarProvider>
       </BrowserRouter>
     </div>
   );
