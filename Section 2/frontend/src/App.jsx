@@ -13,6 +13,7 @@ import { Toaster } from "react-hot-toast";
 import { AnimatePresence } from "framer-motion";
 import { SnackbarProvider } from "notistack";
 import ManageUser from "./components/ManageUser";
+import UpdateUser from "./components/UpdateUser";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/state" element={<StateManagement />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/manageuser" element={<ManageUser />} />
+          <Route path="/updateuser/:id" element={<UpdateUser />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
