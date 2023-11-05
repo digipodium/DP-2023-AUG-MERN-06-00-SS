@@ -12,6 +12,18 @@ const ManageUser = () => {
         setUserList(data);
     };
 
+    const deleteUserData = async (id) => {
+        console.log(id);
+        const res = await fetch('http://localhost:5000/user/delete/'+id, {
+            method : 'DELETE'
+        });
+
+        console.log(res.status);
+        if(res.status === 200){
+            fetchUserData();
+        }
+    }
+
     useEffect(() => {
         fetchUserData();
     }, [])
@@ -51,7 +63,7 @@ const ManageUser = () => {
                                         </button>
                                     </td>
                                     <td>
-                                        <button className='btn btn-danger rounded-pill'>
+                                        <button onClick={() => { deleteUserData(user._id) }} className='btn btn-danger rounded-pill'>
                                             <i class="fa-solid fa-trash"></i>&nbsp;Delete
                                         </button>
                                     </td>
