@@ -1,9 +1,49 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const sessionData = sessionStorage.getItem('user');
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionData));
+  
+  const navigate = useNavigate();
+
+  const logout = () => {
+    sessionStorage.removeItem('user');
+    setCurrentUser(null);
+    navigate('/login');
+  }
+
+  const displayLoginOptions = () => {
+    if (currentUser !== null) {
+      return <>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/todo">
+            Todo
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <button className='btn btn-danger' onClick={logout}>Logout</button>
+        </li>
+      </>
+    } else {
+      return <>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/register">
+            Register
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/login">
+            Login
+          </NavLink>
+        </li>
+      </>
+    }
+  }
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#005d8d'}}>
+    <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#005d8d' }}>
       <div className="container">
         <a className="navbar-brand" href="#">
           Navbar
@@ -26,16 +66,7 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/register">
-                Register
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/login">
-                Login
-              </NavLink>
-            </li>
+
             <li className="nav-item">
               <NavLink className="nav-link" to="/eventhandling">
                 Event Handling
@@ -46,16 +77,14 @@ const Navbar = () => {
                 State Management
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/todo">
-                Todo
-              </NavLink>
-            </li>
+
             <li className="nav-item">
               <NavLink className="nav-link" to="/manageuser">
                 Manage User
               </NavLink>
             </li>
+
+            {displayLoginOptions()}
           </ul>
         </div>
       </div>
