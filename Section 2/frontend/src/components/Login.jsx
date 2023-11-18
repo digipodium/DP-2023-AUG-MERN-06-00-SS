@@ -28,6 +28,11 @@ const Login = () => {
       });
 
       if (res.status === 200) {
+
+        const data = await res.json();
+
+        sessionStorage.setItem('user', JSON.stringify(data));
+
         enqueueSnackbar('Login Success', {
           variant: 'success',
           anchorOrigin: {
