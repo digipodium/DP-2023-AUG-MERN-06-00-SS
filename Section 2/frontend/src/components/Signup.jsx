@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
-import React from 'react';
+import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
@@ -18,6 +18,7 @@ const SignupSchema = Yup.object().shape({
 const Signup = () => {
 
   const navigate = useNavigate();
+  const [selimg, setSelimg] = useState('');
 
   // initialize formik
   const signupForm = useFormik({
@@ -28,6 +29,7 @@ const Signup = () => {
     },
 
     onSubmit: async (values, {resetForm}) => { 
+      values.avatar = selimg;
       console.log(values);
       
       const res = await fetch('http://localhost:5000/user/add', {
@@ -69,6 +71,7 @@ const Signup = () => {
   const uploadFile = async (e) => {
     const file = e.target.files[0];
     const formdata = new FormData();
+    setSelimg(file.name);
 
     formdata.append('myfile', file);
 

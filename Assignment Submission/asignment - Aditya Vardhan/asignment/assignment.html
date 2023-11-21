@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comic+Neue:300,300italic,regular,italic,700,700italic"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Comic+Neue:300,300italic,regular,italic,700,700italic);
+      body {
+        font-family: "comic-neue";
+      }
+      hr {
+        margin: 0px;
+        padding: 3px;
+        background-color: black;
+      }
+      .header_bg_img {
+        background-image: url(./hrimg2.png);
+        object-fit: cover;
+      }
+      .nav_margin {
+        margin-top: -45px;
+        font-size: 20px;
+      }
+
+      .nav_margin a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .hero_img {
+        border-top: 1px solid rgb(146, 146, 146);
+        background-image: url(./hrimg1.png);
+        height: 215px;
+      }
+      .hero_img2 {
+        border-top: 1px solid rgb(146, 146, 146);
+        background-image: url(./hrimg1.png);
+        height: 215px;
+      }
+
+      .hero_text {
+        margin-top: 0px;
+      }
+
+      .hero_text h1 {
+        font-size: 100px;
+      }
+
+      .price-bg {
+        background-image: url(./pricebg.jpg);
+        height: 99vh;
+      }
+
+      .feature-bg {
+        background-image: url(./featurebg.png);
+        object-fit: contain;
+        background-repeat: round;
+      }
+
+      .bold {
+        font-weight: bolder;
+      }
+
+      .slim {
+        font-weight: 200;
+      }
+
+      .hover_gold:hover {
+        color: gold !important;
+      }
+      .hover_green:hover {
+        color: rgb(3, 255, 3) !important;
+      }
+      .hover_red:hover {
+        color: red !important;
+      }
+      .myimg {
+        height: 300px;
+        object-fit: contain;
+      }
+      .shop-head:hover {
+        text-decoration: underline;
+      }
+      .aboutimg {
+        height: 500px;
+        object-fit: cover;
+        border: 2px solid black;
+      }
+
+      .aboutus {
+        background-image: url(https://wallpapers.com/images/hd/famous-comic-book-collection-mzqzulamob1epsh5.jpg);
+        height: 99vh;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .neg_margin {
+        margin-bottom: -23px;
+      }
+      .neg_margin2 {
+        margin-top: -200px;
+      }
+
+      .conatactus {
+        background-image: url(https://cdn.wallpapersafari.com/61/16/bc0348.jpg);
+        height: 857px;
+        background-repeat: round;
+      }
+
+      .size {
+        font-size: 17px;
+      }
+
+      #footer {
+        height: 300px;
+      }
+
+      .hrbar {
+        height: 220px;
+        margin-top: 40px;
+        border-right: 1px;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-style: solid;
+        border-color: white;
+      }
+
+      .marginbar {
+        margin-right: -200px;
+      }
+      .marginbar2 {
+        margin-right: -180px;
+      }
+      .marginbar3 {
+        padding-top: 40px;
+        margin-left: 50px;
+        width: 300px;
+      }
+      .marginbar4 {
+        
+        margin-left: 10px;
+        
+      }
+      .social {
+        margin-left: 110px;
+      }
+      .textsize {
+        font-size: 25px;
+      }
+      .h4_edit {
+        padding-top: 35px;
+        margin-left: 105px;
+        margin-right: -300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="home" class="header_bg_img text-white">
+      <div class="bg-black bg-opacity-50">
+        <div class="container py-5 neg_margin">
+          <div class="row">
+            <a href="#home"><h3 class="text-white display-5">Heros</h3></a>
+            <h6>Get your Stuffs Done Here...</h6>
+            <div class="text-end nav_margin d-inline">
+              <a href="#pricing" class="px-4">Pricing</a>
+              <a href="#aboutus" class="ps-2">About Us</a>
+              <a href="#contactus" class="ps-4">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="hero-caro" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active hero_img2">
+          <div class="bg-black opacity-50">
+            <div class="hero_text text-center">
+              <h1 class="py-5 text-white">New Marvels Comics</h1>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active hero_img2">
+          <div class="bg-black opacity-50">
+            <div class="hero_text text-center">
+              <h1 class="py-5 text-white">New Marvel Merchandise</h1>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active hero_img2">
+          <div class="bg-black opacity-50">
+            <div class="hero_text text-center">
+              <a href="#pricing"
+                ><h1 class="py-5 text-white">Subscribe Now</h1></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero-caro"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero-caro"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </section>
+
+    <hr />
+
+    <section id="featured" class="feature-bg py-5">
+      <div class="container">
+        <div class="card border-0">
+          <div class="card-body">
+            <h1 class="text-center bold pb-3">Featured</h1>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="card py-2">
+                  <a
+                    href="https://cdn.marvel.com/content/1x/avengers50_infinitysaga_variant.jpg"
+                    ><img
+                      src="https://cdn.marvel.com/content/1x/avengers50_infinitysaga_variant.jpg"
+                      alt="comic img"
+                      class="card-img-top py-2 myimg"
+                  /></a>
+                  <div class="card-body">
+                    <h6 class="text-black-50">Marvel Comics</h6>
+                    <h3 class="shop-head">Relive, Phase 1</h3>
+                    <p class="d-inline-flex pt-2">
+                      <button
+                        class="btn btn-outline-dark"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse1"
+                        aria-expanded="true"
+                        aria-controls="collapse1"
+                      >
+                        Read it &dharr;
+                      </button>
+                    </p>
+                    <div class="collapse" id="collapse1">
+                      <div class="card card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iusto dolorum laudantium ullam veniam inventore eum
+                        eligendi quisquam? Dolores officia voluptates nisi
+                        tempora optio nostrum cum repellat, officiis odio!
+                        Suscipit, vero.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card py-2">
+                  <a
+                    href="https://www.7ate9comics.com/cdn/shop/files/AVENGERS_1_1_25_CHECETTO_VARIANT.jpg"
+                    ><img
+                      src="https://www.7ate9comics.com/cdn/shop/files/AVENGERS_1_1_25_CHECETTO_VARIANT.jpg"
+                      alt="comic img"
+                      class="card-img-top py-2 myimg"
+                  /></a>
+                  <div class="card-body">
+                    <h6 class="text-black-50">Marvel Comics</h6>
+                    <h3 class="shop-head">Marco Checcetto</h3>
+                    <p class="d-inline-flex pt-2">
+                      <button
+                        class="btn btn-outline-dark"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse2"
+                        aria-expanded="true"
+                        aria-controls="collapse2"
+                      >
+                        Read it &dharr;
+                      </button>
+                    </p>
+                    <div class="collapse" id="collapse2">
+                      <div class="card card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iusto dolorum laudantium ullam veniam inventore eum
+                        eligendi quisquam? Dolores officia voluptates nisi
+                        tempora optio nostrum cum repellat, officiis odio!
+                        Suscipit, vero.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card py-2">
+                  <a href="https://cdn.marvel.com/content/1x/clean_429.jpg"
+                    ><img
+                      src="https://cdn.marvel.com/content/1x/clean_429.jpg"
+                      alt="comic img"
+                      class="card-img-top py-2 myimg"
+                  /></a>
+                  <div class="card-body">
+                    <h6 class="text-black-50">Marvel Comics</h6>
+                    <h3 class="shop-head">Women Of Marvel</h3>
+                    <p class="d-inline-flex pt-2">
+                      <button
+                        class="btn btn-outline-dark"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse3"
+                        aria-expanded="true"
+                        aria-controls="collapse3"
+                      >
+                        Read it &dharr;
+                      </button>
+                    </p>
+                    <div class="collapse" id="collapse3">
+                      <div class="card card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iusto dolorum laudantium ullam veniam inventore eum
+                        eligendi quisquam? Dolores officia voluptates nisi
+                        tempora optio nostrum cum repellat, officiis odio!
+                        Suscipit, vero.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card py-2">
+                  <a
+                    href="https://pbs.twimg.com/media/FxZRBklXoAIPbx-?format=jpg&name=4096x4096"
+                    ><img
+                      src="https://pbs.twimg.com/media/FxZRBklXoAIPbx-?format=jpg&name=4096x4096"
+                      alt="comic img"
+                      class="card-img-top py-2 myimg"
+                  /></a>
+                  <div class="card-body">
+                    <h6 class="text-black-50">Marvel Comics</h6>
+                    <h3 class="shop-head">Relive, Phase 1</h3>
+                    <p class="d-inline-flex pt-2">
+                      <button
+                        class="btn btn-outline-dark"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse"
+                        aria-expanded="true"
+                        aria-controls="collapse"
+                      >
+                        Read it &dharr;
+                      </button>
+                    </p>
+                    <div class="collapse" id="collapse">
+                      <div class="card card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iusto dolorum laudantium ullam veniam inventore eum
+                        eligendi quisquam? Dolores officia voluptates nisi
+                        tempora optio nostrum cum repellat, officiis odio!
+                        Suscipit, vero.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="pricing" class="price-bg py-5 border-3 border-black">
+      <div class="container py-5">
+        <div class="card border-3 py-2 border-black">
+          <div class="card-body text-center row">
+            <h2 class="py-3">What You Can Get</h2>
+            <div class="col-sm-4 col-4">
+              <div class="card pb-1">
+                <div class="card-body pb-5">
+                  <h5 class="text-black bold">Details</h5>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Quality of Comics</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">New Comics</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Storage</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Back-up</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Merchandise</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Secret Comics</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Audio Books</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Visual Novels</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim">Marvel Specials</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="text-black bold hover_gold">
+                    $10<sub class="slim">/month</sub>
+                  </h5>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">Good</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">Every Month</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">5 GB</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">
+                    Weekly Back-up
+                  </h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_red">&cross;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_red">&cross;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <div id="subscribe10alert"></div>
+                  <button id="subscribe10btn" class="btn btn-outline-dark">
+                    Subscribe Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="text-black bold hover_gold">
+                    $20<sub class="slim">/month</sub>
+                  </h5>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">Best</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">Every Week</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">10 GB</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">Daily Back-up</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <h6 class="text-secondary slim hover_green">&check;</h6>
+                  <h6 class="text-secondary slim">&nbsp;</h6>
+                  <div id="subscribe20alert"></div>
+                  <button id="subscribe20btn" class="btn btn-outline-dark">
+                    Subscribe Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="aboutus" class="aboutus bg-black py-5">
+      <div class="container py-5">
+        <div class="card border-3 border-dark-subtle my-5">
+          <h1 class="text-center pt-5 pb-3 slim">About Us</h1>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3 ps-3 pb-3">
+                <img
+                  src="https://www.wired.com/wp-content/uploads/archive/images/slideshow/2009/01/comic_store_employees/steven_shop2.jpg"
+                  alt=""
+                  class="card-img aboutimg"
+                />
+              </div>
+              <div class="col-sm-9">
+                <h2 class="text-center bold text-black">Heros Comics</h2>
+                <h6 class="text-end text-black-50">Established in 1973</h6>
+                <p>
+                  It was First owned by <i>Stanley Bros.co</i> and then in 2002
+                  transfered to <i>Vardhans.co</i>
+                </p>
+                <br />
+                <p>
+                  Right Now, company have more than 20000 outlets world wide and
+                  also selling online. As well as company shifted to E-Comics
+                  and E-Books so its easy to spread across through Internet.
+                </p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, iusto ipsam ducimus in, fuga voluptates dolores
+                  laborum pariatur corporis tempore eum! Esse eum fuga a natus
+                  porro repellat inventore adipisci dolorum minima sed, hic
+                  nulla nostrum impedit alias quaerat, dolor cum. Magnam, quasi!
+                  Nulla a illo odio earum voluptas quo possimus esse natus
+                  pariatur. Explicabo nulla odit, quos ut, placeat sed incidunt
+                  tenetur repellendus beatae odio suscipit vero. Esse quas
+                  expedita quia natus neque? Aperiam mollitia voluptatem quas
+                  exercitationem eligendi beatae autem dignissimos officiis,
+                  provident voluptas saepe nisi asperiores excepturi quaerat
+                  totam nobis sed in doloribus? Corrupti amet fugit officiis.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Similique delectus necessitatibus harum, at itaque explicabo
+                  quas totam expedita reiciendis fugiat quis error
+                  exercitationem provident ex, fugit dignissimos, animi nobis
+                  laborum nulla perferendis voluptatum quasi debitis unde amet?
+                  Laudantium, soluta mollitia, blanditiis quis veritatis aliquam
+                  beatae, voluptatibus reiciendis magnam deleniti sit.
+                </p>
+                <h6 class="text-end text-black-50">
+                  -Heros Comics ( Vardhans.co )
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contactus" class="conatactus py-5">
+      <div class="container py-5">
+        <div class="card bg-white my-5">
+          <h1 class="text-black text-center py-5">Get In Touch, With Us</h1>
+          <div class="card-body m-auto w-75">
+            <div class="card py-3 ps-5">
+              <form class="d-inline-block">
+                <label class="form-control size border-0 pb-3 d-inline w-25"
+                  ><i class="fa-solid fa-envelope"></i> &nbsp;Email-</label
+                >
+                <input
+                  type="email"
+                  required
+                  class="form-control d-inline w-75 mb-4 ms-2"
+                />
+                <br />
+                <label class="form-control size border-0 py-3 w-25 d-inline"
+                  ><i class="fa-solid fa-circle-exclamation"></i>
+                  &nbsp;Subject-</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="form-control d-inline w-75"
+                />
+                <br />
+                <label class="form-control size border-0 pt-3"
+                  ><i class="fa-solid fa-pen"></i> &nbsp;Message-</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  class="form-control d-inline w-75 mb-4 ms-5 text-dark"
+                  required
+                  cols="100"
+                  rows="5"
+                ></textarea>
+                <button
+                  class="btn btn-outline-success mx-3 my-2 py-2 px-4 slim"
+                >
+                  <i class="fa-regular fa-paper-plane"></i> &nbsp; Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <footer id="footer" class="bg-black">
+      <div class="container">
+        <div class="row text-white">
+          <div class="col-sm-4 marginbar w-25 mb-3">
+            <a href="#home" class="text-white"
+              ><h2 class="pt-4">Heros Comics</h2></a
+            >
+            <h6 class="">Get your Stuffs Done Here...</h6>
+            <h6>&nbsp;</h6>
+            <h5>Address- </h5>
+            <h6>Lorem, ipsum.</h6>
+            <h6>Lorem, ipsum. 256239</h6>
+          </div>
+          <div class="col-sm-1">
+            <div class="hrbar">&nbsp</div>
+          </div>
+
+          <div class="col-sm-3 mb-3">
+            <div class="card border-0 bg-black text-white marginbar2">
+              <h3 class="mt-5 ms-2">Get Offers and Update Details</h3>
+              <label class="form-control bg-black border-0 text-white pb-2 w-25"
+                ><i class="fa-solid fa-envelope"></i> &nbsp;Email -</label
+              >
+              <input
+                type="email"
+                required
+                class="form-control w-100 mb-4 ms-2"
+              />
+              <button type="submit" class="btn btn-outline-info ms-2 w-100">
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div class="">&nbsp</div>
+          </div>
+          <div class="col-sm-1">
+            <div class="hrbar">&nbsp</div>
+          </div>
+          <div class="col-sm-1">
+            <div class="marginbar3">
+              <h4>Check Out</h4>
+              <h6 class="">&nbsp;</h6>
+              <a href="#pricing" class="text-white"
+                ><h6 class="px-3 pt-2">Pricing</h6></a
+              >
+              <a href="#aboutus" class="text-white"
+                ><h6 class="px-3 pt-2">About Us</h6></a
+              >
+              <a href="#contactus" class="text-white"
+                ><h6 class="px-3 py-2">Contact Us</h6></a
+              >
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="marginbar4">
+              <div class="ps-3 ms-5">
+                <h4 class="h4_edit">Also Follow Us On...</h4>
+                <div class="social">
+                  <div>
+                    <a href=""
+                      ><h6 class="text-white text-start">
+                        <i class="fa-brands fa-square-instagram text-danger"></i
+                        >&nbsp; Instagram
+                      </h6></a
+                    >
+                    <a href=""
+                      ><h6 class="text-white text-start">
+                        <i class="fa-brands fa-square-twitter text-info"></i
+                        >&nbsp; Twitter
+                      </h6></a
+                    >
+                    <a href=""
+                      ><h6 class="text-white text-start">
+                        <i class="fa-brands fa-tiktok text-white-50"></i>&nbsp;
+                        Tiktok
+                      </h6></a
+                    >
+                    <a href=""
+                      ><h6 class="text-white text-start">
+                        <i
+                          class="fa-brands fa-square-facebook text-info-emphasis"
+                        ></i
+                        >&nbsp; Facebook
+                      </h6></a
+                    >
+                    <a href=""
+                      ><h6 class="text-white text-start">
+                        <i
+                          class="fa-brands fa-discord text-primary-emphasis"
+                        ></i
+                        >&nbsp; Discord
+                      </h6></a
+                    >
+                    <a href=""
+                      ><h6 class="text-white text-start">
+                        <i class="fa-brands fa-square-snapchat text-warning"></i
+                        >&nbsp; Snapchat
+                      </h6></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <section id="copyright" class="text-bg-dark py-2">
+      <div class="container pt-1">
+        <h6 class="text-center text-white">
+          2023, &nbsp;All Copyrights &copy; are reserved to Vardhans.co
+        </h6>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const myCarouselElement = document.querySelector("#hero-caro");
+
+      const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 2500,
+      });
+
+      const alertPlaceholder10 = document.getElementById("subscribe10alert");
+      const appendAlert10 = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder10.append(wrapper);
+      };
+
+      const alertTrigger10 = document.getElementById("subscribe10btn");
+      if (alertTrigger10) {
+        alertTrigger10.addEventListener("click", () => {
+          appendAlert10("Subscription For 10$ is done", "dark");
+        });
+      }
+
+      const alertPlaceholder20 = document.getElementById("subscribe20alert");
+      const appendAlert20 = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder20.append(wrapper);
+      };
+
+      const alertTrigger20 = document.getElementById("subscribe20btn");
+      if (alertTrigger20) {
+        alertTrigger20.addEventListener("click", () => {
+          appendAlert20("Subscription For 20$ is done", "dark");
+        });
+      }
+    </script>
+  </body>
+</html>

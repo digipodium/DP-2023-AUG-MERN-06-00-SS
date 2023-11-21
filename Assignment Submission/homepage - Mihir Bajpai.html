@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            font-family:'Cambria';
+        } */
+
+        .header{
+            background-color: #73674b;
+            display: block;
+            margin: 0;
+            margin-top: 0;
+            height: 5.5vh;
+        }
+        .header-text{
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            padding-top: 13px;
+        }
+
+        .brand-bar{
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.872);
+            height: 10vh;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+        .brand-bar-left{
+            display: flex;
+        }
+        .brand-logo{
+            color: white;
+            padding-top: 23px;
+            font-size: 10px;
+            padding-left: 30px;
+        }
+        .mytbn{
+            background-color:transparent;
+            border: none;
+            font-size: 17px;
+            color: white;
+            padding: 5px;
+            margin-left: 19px;
+            margin-bottom: 2px;
+            font-weight: 550;
+        
+            &:hover{
+                text-decoration: underline;
+                text-decoration-color: #82734c;
+                text-underline-offset:6px;
+                text-decoration-thickness: 2px;
+            }
+        }
+
+        .search-box{
+            background-color: transparent;
+            border: 2px solid white;
+            margin-right: 20px;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .right-icon{
+            color: white;
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .Fenty{
+            height: 70vh;
+            width: 100%;
+            background-image: url("https://images.puma.com/image/upload/q_auto,f_auto,w_1440/regional/~regional~EEA~others~KOPs~AW23~SPORTSTYLE~FENTY~EEA_23AW_Ecom_Global_SP_Fenty-Avanti_ComingSoon_Rihanna_Desktop_1440x500.jpg/fmt/jpg/fmt/png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .freshdrip{
+            height: 70vh;
+            width: 100%;
+            background-image: url("https://cdn.sanity.io/images/qa41whrn/prod/220d439f03d6a9ad631caaefe81f21e83a881fff-2880x1040.jpg");
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+        }
+        .Discount{
+            height: 15vh;
+            background-color: aquamarine;
+            width: 100%;
+        }
+        .kholi{
+            height: 70vh;
+            width: 100%;
+            background-image: url("https://cdn.sanity.io/images/qa41whrn/prod/de26961c21732dfefb070df4de59cc0b650269b1-2880x1040.jpg");
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+        }
+        .my-btn{
+            padding: 8px 15px;
+            background-color: white;
+            border: none;
+            font-weight: 650;
+            font-size: 15px;
+        }
+        .gender{
+            padding: 15px 25px;
+            background-color: black;
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            float: right;
+            margin: 2px 10px;
+        }
+        .cricket1{
+            padding: 10px 25px;
+            background-color: white;
+            border: none;
+            color: black;
+            font-weight: 650;
+            font-size: 15px;
+            margin-left: 600px;
+            /* margin: 0px 10px; */
+        }
+        .cricket2{
+            padding: 10px 25px;
+            background-color: white;
+            border: none;
+            color: black;
+            font-weight: 650;
+            font-size: 15px;
+            /* margin-left: 500px; */
+            margin: 0px 15px;
+        }
+        .india{
+            background-color:transparent;
+            border: 2px solid white;
+            font-size: 15px;
+            color: white;
+            padding: 10px;
+            margin-left: 30px;
+            margin-bottom: 10;
+            font-weight: 650;
+        }
+
+    </style>
+<body>
+
+    <div class="header">
+        <h4 class="header-text">FREE DELIVERY. FREE RETURNS.</h4>
+    </div>
+
+    <div class="brand-bar">
+        <div class="brand-bar-left">
+            <div class="brand-logo">
+                <img src="logo.png" width="40"  alt="">
+            </div>
+
+            <button class="mytbn">New</button>
+            <button class="mytbn">Women</button>
+            <button class="mytbn">Men</button>
+            <button class="mytbn">Kids</button>
+            <button class="mytbn">FENTYxPUMA</button>
+            <button class="mytbn">Motorsport</button>
+            <button class="mytbn">Collaborations</button>
+            <button class="mytbn">Sports</button>
+            <button class="mytbn">Outlet</button>
+        </div>
+
+        <div class="brand-bar-right-elements">
+            <input class="search-box" type="text" placeholder="Search Item...">
+            <i class="fa-regular fa-heart right-icon"></i>
+            <i class="fa-solid fa-cart-shopping right-icon"></i>
+            <i class="fa-solid fa-user right-icon"></i>
+        </div>
+
+    </div>
+
+        <div>
+            <div class="row m-0 p-0">
+                <div class="col-12 Fenty" style="padding-top: 27vh; padding-left: 10vh;">
+
+                    <h1 style="font-size: 40px; text-align: left; font-weight: 650; color: white;">FENTY x PUMA</h1>
+                    <p style="font-size: 27px; text-align: left; color: white;">THE AVANTI BY RIHANNA</p>
+                    <button class="my-btn">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row m-0 p-0">
+                <div class="col-12 freshdrip mt-5" style="padding-top: 27vh; padding-right: 13vh;">
+
+                    <h1 style="font-size: 40px; text-align: right; font-weight: 650; color: navy;">NEW & TRENDING</h1>
+                    <p style="font-size: 27px; text-align: right; color: navy;">LEVEL UP YOUR STYLE GAME</p>
+                    <button class="gender">KIDS</button>
+                    <button class="gender">WOMEN</button>
+                    <button class="gender">MEN</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row m-0 p-0">
+                <div class="col-12 Discount mt-5" style="padding-top: 1vh; padding-bottom: 15vh;">
+
+                    <h1 style="font-size: 25px; text-align: center; font-weight: 700;">Extra 15% off on orders above ₹4499</h1>
+                    <p style="font-size: 20px; text-align: center; font-weight: 600;">Discount auto-applied at checkout</p>
+                    <p style="text-align: center;">Not applicable on FENTY x PUMA</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row m-0 p-0">
+                <div class="col-12 kholi mt-5" style="padding-top: 25vh; ">
+                    <h1 style="font-size: 40px; text-align: center; font-weight: 650; color: white;">POWER UP YOUR PERFORMANCE</h1>
+                    <p style="font-size: 30px; text-align: center; color: white;">ALL-NEW CRICKET COLLECTION</p>
+                    <button class="cricket1">SHOP NOW</button>
+                    <button class="cricket2">SHOP ALL CRICKET</button>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="margin-bottom: 10px; font-weight: 650; font-size: 30px; margin-left: 30px; margin-top: 55px;">MOST POPULAR RIGHT NOW</h2>
+        <div>
+            <div class="m-0 p-0" style="overflow-x: scroll; overflow-y: hidden; display: flex; padding-left: 30px;">
+                <div class="col-3" style="height: 550px; display: inline; width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/307872/01/sv01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Maco-SL-2.0-Unisex-Driving-Shoes" alt="">
+                    <h6 style="text-align: left;">Mercedes-AMG PETRONAS Maco SL 2.0 Unisex Driving Shoes.</h6>
+                    <h6>₹10,999</h6>
+                </div>
+                <div class="col-3" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/394666/01/sv01/fnd/IND/fmt/png/PUMA-Caven-2.0-75-Years-Unisex-Sneakers" alt="">
+                    <h6>PUMA Caven 2.0 75 Years Unisex Sneakers</h6>
+                    <h6>₹5,999</h6>
+                </div>
+                <div class="col-4" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/392725/01/sv01/fnd/IND/fmt/png/Blktop-Rider-Unisex-Sneakers" alt="">
+                    <h6>Blktop Rider Unisex Sneakers</h6>
+                    <h6>₹8,999</h6>
+                </div>
+                <div class="col-3" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/395792/02/sv01/fnd/IND/fmt/png/PUMA-x-HARRDY-SANDHU-SlipstreamHi-Unisex-Sneakers" alt="">
+                    <h6>PUMA x HARRDY SANDHU SlipstreamHi Unisex Sneakers</h6>
+                    <h6>₹10,999</h6>
+                </div>
+                <div class="col-3" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/392495/01/sv01/fnd/IND/fmt/png/Mayze-Crashed-Women's-Sneakers" alt="">
+                    <h6>Mayze Crashed Women's Sneakers</h6>
+                    <h6>₹7,999</h6>
+                </div>
+                <div class="col-3" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/393237/02/sv01/fnd/IND/fmt/png/Blktop-Rider-Nostalgia-Club-Unisex-Sneakers" alt="">
+                    <h6>Blktop Rider Nostalgia Club Unisex Sneakers</h6>
+                    <h6>₹8,999</h6>
+                </div>
+                <div class="col-3" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/393533/01/sv01/fnd/IND/fmt/png/PUMA-x-THE-SMURFS-RS-X-Unisex-Sneakers" alt="">
+                    <h6>PUMA x THE SMURFS RS-X Unisex Sneakers</h6>
+                    <h6>₹11,999</h6>
+                </div>
+                <div class="col-3" style="height: 500px; display: inline;  width: 31%;">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/378301/08/sv01/fnd/IND/fmt/png/X-Cell-Action-Unisex-Running-Shoes" alt="">
+                    <h6>X-Cell Action Unisex Running Shoes</h6>
+                    <h6>₹8,999</h6>
+                </div>
+                <!-- <div class="col-3" style="background-color: #aaa; height: 500px; display: inline-block;">
+                    
+                </div> -->
+            </div>
+        </div>
+
+        <footer class="bg-black text-white mt-5">
+            <div class="details py-1" style="padding-left: 100px;" >
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 style="font-size: 20px; font-weight: 600; padding-top: 50px;">SUPPORT</h4>
+    
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250; padding-top: 25px;">Contact Us</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Promotions & Sale</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Track Order</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Privacy Policy</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Terms & Conditions</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Cookie Settings</a>
+                        
+
+                    </div>
+                    <div class="col-sm-3" >
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250; padding-top: 100px;">FAQs</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">My Account</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Return Policy</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Tech Glossary</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Initiate Return</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4 style="font-size: 20px; font-weight: 600; padding-top: 50px;">ABOUT US</h4>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250; padding-top: 25px;">Company</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;"> Corporate News</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Press Center</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Investors</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Sustainability</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Careers</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">Store Finder</a>
+                        <a href="" class="text-white d-block my-2 no-underlinne" style="text-decoration: none; font-size: 18px; font-weight: 250;">PUMA DNA</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5 style="font-size: 20px; font-weight: 600; padding-top: 50px;">STAY UP TO DATE</h5>
+
+                        <div style="display: flex;">
+                        
+                            <h1 style="padding-top: 30px; padding-right: 45px; font-size: 30px;">
+                                <i class="fa-brands fa-facebook"></i>
+                                <!-- <a href="" class="text-white no-underlinne">Facebook</a> -->
+                            </h1>
+                            <h1 style="padding-top: 30px; padding-right: 45px; font-size: 30px;">
+                                <i class="fa-brands fa-instagram"></i>
+                                <!-- <a href="" class="text-white no-underlinne">Instagram</a> -->
+                            </h1>
+                            <h1 style="padding-top: 30px; padding-right: 45px; font-size: 30px;">
+                                <i class="fa-brands fa-youtube"></i>
+                                <!-- <a href="" class="text-white no-underlinne">Linkedin</a> -->
+                            </h1>
+                            <h1 style="padding-top: 30px; padding-right: 45px; font-size: 30px;">
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <!-- <a href="" class="text-white no-underlinne">Twitter</a> -->
+                            </h1>
+                        
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="bg-black py-1 text-center">
+                <hr>
+                <button class="india">🧡🤍💚INDIA</button>
+                <i class="fa-brands fa-cc-visa" style="font-size: 35px; float: left; margin-left: 60px;"></i>
+                <i class="fa-brands fa-cc-mastercard" style="font-size: 35px; float: left; margin-left: 30px;"></i>
+                <i class="fa-brands fa-cc-paypal" style="font-size: 35px; float: left; margin-left: 30px;"></i>
+                <h6 style="float: right; margin-right: 20px; font-size: 15px;">© PUMA INDIA LTD, 2023. ALL RIGHTS RESERVED.</h6>
+            </div>
+        </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
