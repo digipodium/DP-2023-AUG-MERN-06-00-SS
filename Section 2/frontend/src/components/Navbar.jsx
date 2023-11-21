@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import useAppContext from '../AppContext';
 
-const Navbar = () => {
+const Navbar = ({cartItems}) => {
+
+  const { loggedIn, setLoggedIn } = useAppContext();
 
   const sessionData = sessionStorage.getItem('user');
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionData));
@@ -12,10 +15,11 @@ const Navbar = () => {
     sessionStorage.removeItem('user');
     setCurrentUser(null);
     navigate('/login');
+    setLoggedIn(false);
   }
 
   const displayLoginOptions = () => {
-    if (currentUser !== null) {
+    if (loggedIn) {
       return <>
         <li className="nav-item">
           <NavLink className="nav-link" to="/todo">
@@ -83,8 +87,10 @@ const Navbar = () => {
                 Manage User
               </NavLink>
             </li>
-
             {displayLoginOptions()}
+            <li className='nav-item my-auto text-white'>
+              <h5>Cart Items : {cartItems}</h5>
+            </li>
           </ul>
         </div>
       </div>

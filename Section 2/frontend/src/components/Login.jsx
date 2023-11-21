@@ -3,11 +3,14 @@ import { enqueueSnackbar } from 'notistack';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import useAppContext from '../AppContext';
 
 
 const Login = () => {
 
   const navigate = useNavigate();
+
+  const { setLoggedIn } = useAppContext();
 
   // initialize formik
   const loginForm = useFormik({
@@ -32,6 +35,7 @@ const Login = () => {
         const data = await res.json();
 
         sessionStorage.setItem('user', JSON.stringify(data));
+        setLoggedIn(true);
 
         enqueueSnackbar('Login Success', {
           variant: 'success',

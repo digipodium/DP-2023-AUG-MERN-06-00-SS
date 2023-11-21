@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 
@@ -63,7 +64,24 @@ const Signup = () => {
 
     validationSchema: SignupSchema
   
-  })
+  });
+
+  const uploadFile = async (e) => {
+    const file = e.target.files[0];
+    const formdata = new FormData();
+
+    formdata.append('myfile', file);
+
+    const res = await fetch('http://localhost:5000/util/uploadfile', {
+      method: 'POST',
+      body: formdata
+    });
+
+    console.log(res.status);
+    if(res.status === 200){
+      toast.success('File uploaded successfully');
+    }
+  }
 
   return (
     <div className='vh-100 bg-body-secondary'>
@@ -80,6 +98,9 @@ const Signup = () => {
                 <label>Password</label>
                 <span className='error-label'>{ signupForm.touched.password && signupForm.errors.password}</span>
                 <input type="password" className="form-control mb-3" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} />
+
+                <label htmlFor="">Upload Image</label>
+                <input type="file" onChange={uploadFile} />
 
                 <button type='submit' className='btn btn-primary mt-3'>Submit</button>
               </form>
